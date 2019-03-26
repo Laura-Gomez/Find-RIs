@@ -56,6 +56,8 @@ COMMAND LINE
 
 ```
 python bin/Find_RI.py -b data/cra_glucose.gff.txt.bed -f data/GSE65643_WT_GlucosevsDeltacra_Glucose.txt -g data/gene_pos.bed -d data/MaximalDistancesPerTF.txt -t Cra -o out/cra_glucose.ri -r out/cra_glucose.ri.regulon
+
+unique out/cra_glucose.ri > out/cra_glucose.uniq.ri
 ```
 
 ### INPUT
@@ -67,4 +69,25 @@ python bin/Find_RI.py -b data/cra_glucose.gff.txt.bed -f data/GSE65643_WT_Glucos
 
 ### OUTPUT
 
- - 
+Binding sites associated with target genes that have a change in expression
+
+[out/cra_glucose.ri]
+
+ - Start position BS
+ - End position BS
+ - TF
+ - Gene
+ - Fold change
+
+
+[out/cra_glucose.ri.regulon]: Format required by RegulonDB
+ - Start position BS
+ - End position BS
+ - Distance from BS center to gene start
+ - TF
+ - Gene
+ - BS strand
+ - BS ID
+ - BS sequence
+
+The BS ID is obtained from the "Experiment BSs positions" file

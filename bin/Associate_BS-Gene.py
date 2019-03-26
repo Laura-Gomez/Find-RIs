@@ -34,7 +34,7 @@ with open(dis_file) as handle:
 #print (up_exp)
 #print (dw_exp)
 
-#### HASH WITH REGULATORY RANGE POSITIONS FOR EACH GENE ACCORDING TO THE ANALYZED TF
+#### HASH WITH PREGULATORY RANGE POSITIONS FOR EACH GENE ACCORDING TO THE ANALYZED TF
 
 gene_min = {}
 gene_max = {}
@@ -59,8 +59,6 @@ with open(gene_file) as handle:
             
 output_reg = open(output_file_regulon, 'w')
 
-
-### FOR EACH BINDING SITE, LOOKS IF IT IS IN THE REGULATORY RANGE FOR EACH GENE
 
 with open(binding_file) as handle:
     for line in handle:
